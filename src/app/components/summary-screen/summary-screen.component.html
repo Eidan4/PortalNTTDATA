@@ -1,0 +1,97 @@
+<div class="container mt-5">
+    <h4 class="text-center mb-4">Información básica</h4>
+  
+    <div class="card">
+      <div class="card-body">
+        <!-- Primer Apellido -->
+        <div class="mb-3">
+          <label for="primerApellido" class="form-label">Primer apellido</label>
+          <input
+            type="text"
+            id="primerApellido"
+            class="form-control"
+            [value]="clientData?.primerApellido || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Primer Nombre -->
+        <div class="mb-3">
+          <label for="primerNombre" class="form-label">Primer nombre</label>
+          <input
+            type="text"
+            id="primerNombre"
+            class="form-control"
+            [value]="clientData?.primerNombre || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Segundo Apellido -->
+        <div class="mb-3">
+          <label for="segundoApellido" class="form-label">Segundo apellido</label>
+          <input
+            type="text"
+            id="segundoApellido"
+            class="form-control"
+            [value]="clientData?.segundoApellido || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Segundo Nombre -->
+        <div class="mb-3">
+          <label for="segundoNombre" class="form-label">Segundo nombre</label>
+          <input
+            type="text"
+            id="segundoNombre"
+            class="form-control"
+            [value]="clientData?.segundoNombre || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Teléfono -->
+        <div class="mb-3">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input
+            type="text"
+            id="telefono"
+            class="form-control"
+            [value]="clientData?.telefono || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Dirección -->
+        <div class="mb-3">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            id="direccion"
+            class="form-control"
+            [value]="clientData?.direccion || 'No disponible'"
+            readonly
+          />
+        </div>
+  
+        <!-- Ciudad de Residencia -->
+        <div class="mb-3">
+          <label for="ciudadResidencia" class="form-label">Ciudad de Residencia</label>
+          <input
+            type="text"
+            id="ciudadResidencia"
+            class="form-control"
+            [value]="clientData?.ciudadResidencia || 'No disponible'"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+  
+    <!-- Botón Volver -->
+    <div class="text-center mt-4">
+      <button class="btn btn-primary" (click)="goBack()">Volver</button>
+    </div>
+  </div>
+  

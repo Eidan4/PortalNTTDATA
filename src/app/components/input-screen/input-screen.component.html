@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <h4 class="text-center mb-4">Consulta de Información</h4>
+    <form [formGroup]="_form">
+      <div class="card p-3">
+        <p class="text-muted text-center">Todos los campos son obligatorios</p>
+  
+        <!-- Tipo de documento -->
+        <div class="mb-3">
+          <label for="docType" class="form-label">Tipo de documento</label>
+          <select
+            id="docType"
+            class="form-select"
+            formControlName="docType"
+          >
+            <option value="" disabled selected>Seleccione un tipo</option>
+            <option value="C">Cédula de ciudadanía</option>
+            <option value="P">Pasaporte</option>
+          </select>
+        </div>
+  
+        <!-- Número de documento -->
+        <div class="mb-3">
+          <label for="docNumber" class="form-label">Número de documento</label>
+          <input
+            id="docNumber"
+            type="text"
+            class="form-control"
+            formControlName="docNumber"
+            placeholder="Número de documento"
+          />
+        </div>
+  
+        <!-- Botón Buscar -->
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-primary w-100"
+            [ngClass]="{ 'btn-active': !_form.invalid, 'btn-inactive': _form.invalid }"
+            [disabled]="_form.invalid"
+            (click)="search()"
+          >
+            Buscar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
